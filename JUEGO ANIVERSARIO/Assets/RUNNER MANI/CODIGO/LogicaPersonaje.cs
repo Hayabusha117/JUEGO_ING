@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿//CHÁVEZ MAGAÑA MANUEL 
+//PROYECTO ING COMPUTACION UNAM 
+//FECHA: 28/03/2022
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +9,8 @@ public class LogicaPersonaje : MonoBehaviour
 {
     public float velocity = 1;
     private Rigidbody2D rb;
+
+    public ControladorEscena controladorEscena;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +30,6 @@ public class LogicaPersonaje : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
+        controladorEscena.Perdiste();
     }
 }
